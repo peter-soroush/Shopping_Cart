@@ -1,7 +1,8 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import api from "../services/config";
+
 const ProductContexter = createContext();
-function ProductContexts(children) {
+function ProductContexts({ children }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -15,7 +16,16 @@ function ProductContexts(children) {
     fetchProducts();
   }, []);
 
-  return <ProductContexter.Provider>{children}</ProductContexter.Provider>;
+  return (
+    <ProductContexter.Provider value={products}>
+      {children}
+    </ProductContexter.Provider>
+  );
 }
 
+const useProducts = () => {
+  const products2 = useContext(ProductContexter);
+  return products2;
+};
 export default ProductContexts;
+export { useProducts };
