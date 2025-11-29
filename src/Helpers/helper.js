@@ -41,12 +41,22 @@ const getInitialQuery = (searchParams) => {
 };
 
 const sumProducts = (p) => {
-  const itemCounter = p.reduce((acc, cur) => acc + cur.quantitiy, 0);
+  const itemCounter = p.reduce((acc, cur) => acc + cur.quantity, 0);
   const total = p
-    .reduce((acc, cur) => acc + cur.price * cur.quantitiy, 0)
+    .reduce((acc, cur) => acc + cur.price * cur.quantity, 0)
     .toFixed(2);
-
+  console.log({ itemCounter, total });
+  console.log("p:", p);
   return { itemCounter, total };
+};
+
+const productQantity = (state, id) => {
+  const index = state.selectedItems.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return 0;
+  } else {
+    return state.selectedItems[index].quantity;
+  }
 };
 
 export {
@@ -56,4 +66,5 @@ export {
   queryOptimizer,
   getInitialQuery,
   sumProducts,
+  productQantity,
 };
