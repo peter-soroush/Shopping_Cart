@@ -64,10 +64,10 @@ This project was built to demonstrate:
 
 This project utilizes the following technologies:
 
-- **[Language]**: (e.g., JavaScript, Python, C#)
-- **[Framework]**: (e.g., React, Flask, Django, Vue.js)
-- **[Styling]**: (e.g., CSS3, Tailwind, Bootstrap)
-- **[Database]**: (e.g., LocalStorage, SQLite, MongoDB)
+- **[HTML5/JavascriptES6]**:
+- **[React]**:
+- **[CSS3]**:
+- **[LocalStorage]**:
 
 ---
 
