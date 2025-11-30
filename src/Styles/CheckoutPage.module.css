@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  min-height: 100%;
+}
+
+.products {
+  width: 100%;
+}
+
+.container a {
+  padding-left: 120px;
+  width: 250px;
+  text-decoration: none;
+  background-color: #fe5d42;
+  align-items: center;
+  align-content: center;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

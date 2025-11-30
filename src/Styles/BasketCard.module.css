@@ -36,19 +36,8 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.EmptyCart a {
+.EmptyCart {
   display: flex;
   align-content: space-between;
-}
-.EmptyCart a {
-  width: 200px;
-  text-decoration: none;
-  background-color: #fe5d42;
-  color: #fff;
-  border: none;
-  font-size: 1.3rem;
-  line-height: 25px;
-  padding: 2px;
-  border-radius: 8px;
-  cursor: pointer;
+  margin: 10px;
 }
