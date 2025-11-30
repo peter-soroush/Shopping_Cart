@@ -38,10 +38,9 @@ const reducer = (state, action) => {
       const Increaseindex = state.selectedItems.findIndex(
         (item) => item.id == action.payload.id
       );
-      // console.log("Increaseindex: ", action.payload.id);
-      // console.log("action.payload.id: ", action.payload.id);
+
       state.selectedItems[Increaseindex].quantity++;
-      console.log("state.selectedItems:", state.selectedItems);
+
       return { ...state, ...sumProducts(state.selectedItems) };
     }
     case "Decrease": {
@@ -65,7 +64,6 @@ const reducer = (state, action) => {
 };
 function CartProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
 
   return (
     <CartContext.Provider value={{ state, dispatch }}>

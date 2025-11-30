@@ -45,8 +45,6 @@ const sumProducts = (p) => {
   const total = p
     .reduce((acc, cur) => acc + cur.price * cur.quantity, 0)
     .toFixed(2);
-  console.log({ itemCounter, total });
-  console.log("p:", p);
   return { itemCounter, total };
 };
 
