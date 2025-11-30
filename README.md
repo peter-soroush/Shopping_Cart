@@ -64,10 +64,10 @@ This project was built to demonstrate:
 
 This project utilizes the following technologies:
 
-- **[HTML5/JavascriptES6]**:
-- **[React]**:
-- **[CSS3]**:
-- **[LocalStorage]**:
+- **[HTML5/JavascriptES6]**
+- **[React]**
+- **[CSS3]**
+- **[LocalStorage]**
 
 ---
 
