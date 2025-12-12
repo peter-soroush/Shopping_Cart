@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PiShoppingBagBold } from "react-icons/pi";
-import { useCart } from "../context/CartContext";
+// import { useCart } from "../context/CartContext";
 import style from "../Styles/Layout.module.css";
 function Layout({ children }) {
-  const [state] = useCart();
+  // const [state] = useCart();
   return (
     <>
       <header className={style.header}>
@@ -12,7 +12,7 @@ function Layout({ children }) {
         <Link to="/checkout">
           <div>
             <PiShoppingBagBold />
-            {!!(state.itemCounter > 0) && <span>{state.itemCounter}</span>}
+            {/* {!!(state.itemCounter > 0) && <span>{state.itemCounter}</span>} */}
           </div>
         </Link>
       </header>
