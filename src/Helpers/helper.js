@@ -40,12 +40,13 @@ const getInitialQuery = (searchParams) => {
   return query;
 };
 
-const sumProducts = (p) => {
-  const itemCounter = p.reduce((acc, cur) => acc + cur.quantity, 0);
-  const total = p
+const sumPrice = (products) => {
+  return products
     .reduce((acc, cur) => acc + cur.price * cur.quantity, 0)
     .toFixed(2);
-  return { itemCounter, total };
+};
+const sumQuan = (products) => {
+  return products.reduce((acc, cur) => acc + cur.quantity, 0);
 };
 
 const productQantity = (state, id) => {
@@ -63,6 +64,7 @@ export {
   catHandeller,
   queryOptimizer,
   getInitialQuery,
-  sumProducts,
+  sumPrice,
+  sumQuan,
   productQantity,
 };

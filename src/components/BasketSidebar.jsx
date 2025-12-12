@@ -3,8 +3,11 @@ import { TbChecklist } from "react-icons/tb";
 import { FaHashtag } from "react-icons/fa6";
 import { BsPatchCheck } from "react-icons/bs";
 import style from "../Styles/BasketSideBar.module.css";
-function BasketSidebar({ state, clickHandeler }) {
-  console.log(state.quantity);
+import { useDispatch } from "react-redux";
+import { checkout } from "../feature/cart/cartSlice";
+function BasketSidebar({ state }) {
+  const dispatch = useDispatch();
+
   return (
     <div className={style.sidebar}>
       <div>
@@ -15,14 +18,14 @@ function BasketSidebar({ state, clickHandeler }) {
       <div>
         <FaHashtag />
         <p>Quantity:</p>
-        <span>{state.itemCounter}</span>
+        <span>{state.itemsCounter}</span>
       </div>
       <div>
         <BsPatchCheck />
         <p>Status:</p>
         <span>{!state.checkout && "Pending..."}</span>
       </div>
-      <button onClick={() => clickHandeler("CheckOut")}>Checkout</button>
+      <button onClick={() => dispatch(checkout())}>Checkout</button>
     </div>
   );
 }
